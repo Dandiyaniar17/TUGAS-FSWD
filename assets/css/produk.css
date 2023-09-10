@@ -1,0 +1,39 @@
+body{
+    background: rgb(124, 247, 196);
+}
+.grid{
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+ 
+.grid>div>img{
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30p;
+    object-fit: contain;
+ 
+}
+.konten{
+    margin: 50px;
+    cursor: progress;
+}
+.grid>div:hover{
+    transform: rotate(10deg);
+    transform: scale(1.2);
+}
+
+.box{
+    width: 250px;
+    box-shadow: 10px 5px 5px 0px black;
+    border-radius: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    width: 300px;
+    margin: 50px;
+}
+.gambar{
+    justify-content: center;
+    width: 250px;
+}
