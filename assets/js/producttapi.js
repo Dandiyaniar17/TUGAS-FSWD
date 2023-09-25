@@ -58,34 +58,37 @@ function showSlides(n) {
 const productApi = "https://fakestoreapi.com/products ";
 
 fetch(productApi)
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById("grid").innerHTML = "";
-    data.forEach(function (product) {
-      let element = document.createElement("div");
-      element.className = "box";
-      let img = document.createElement("img");
-      img.className = "gambar";
-      img.src = product.image;
-      element.appendChild(img);
+.then (response=>response.json())
+.then(data=>{ document.getElementById("grid").innerHTML = "";
+products.forEach(function (product) {
+  let element = document.createElement("div");
+  element.className = "box";
+  let img = document.createElement("img");
+  img.className = "gambar";
+  img.src = product.image;
+  element.appendChild(img);
 
-      let content = document.createElement("div");
-      content.className = "konten";
-      element.appendChild(content);
+  let content = document.createElement("div");
+  content.className = "konten";
+  element.appendChild(content);
 
-      let h2 = document.createElement("h2");
-      h2.innerHTML = product.title;
-      content.appendChild(h2);
+  let h2 = document.createElement("h2");
+  h2.innerHTML = product.title;
+  content.appendChild(h2);
 
-      let deskripsi = document.createElement("p");
-      deskripsi.innerHTML = product.deskripsi;
-      content.appendChild(deskripsi);
+  let deskripsi = document.createElement("p");
+  deskripsi.innerHTML = product.deskripsi;
+  content.appendChild(deskripsi);
 
-      let harga = document.createElement("p");
-      harga.innerHTML = product.price;
-      content.appendChild(harga);
+  let harga = document.createElement("p");
+  harga.innerHTML = product.price;
+  content.appendChild(harga);
 
-      let outpute = document.getElementById("grid");
-      outpute.appendChild(element);
-    });
-  });
+  let outpute = document.getElementById("grid");
+  outpute.appendChild(element);
+});
+
+    
+})
+
+
